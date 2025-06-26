@@ -3,4 +3,5 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="caixinhalega">#828282</color>
+    <color name="fundo">#F7FBE9</color>
 </resources>
