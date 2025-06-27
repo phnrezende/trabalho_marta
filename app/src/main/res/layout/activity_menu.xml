@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FBE9"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="MedVest+"
+        android:textColor="#333333"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/logo" />
+
+    <!-- BottomNav -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appName"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingVertical="24dp">
+
+            <!-- Card Química -->
+
+            <!-- Card Biologia -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginBottom="24dp"
+                android:background="@drawable/bg_btn"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Química"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:layout_width="99dp"
+                    android:layout_height="118dp"
+                    android:src="@drawable/quimica" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:layout_marginBottom="24dp"
+                    android:background="@drawable/bg_btn"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Biologia"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:layout_width="107dp"
+                    android:layout_height="99dp"
+                    android:src="@drawable/biologia2" />
+
+            </LinearLayout>
+
+            <!-- Card Física -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@drawable/bg_btn"
+                android:gravity="center_vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:padding="10dp"
+                    android:text="Física"
+                    android:textColor="#000000"
+                    android:textSize="24sp" />
+
+                <ImageView
+                    android:layout_width="102dp"
+                    android:layout_height="112dp"
+                    android:src="@drawable/fisica" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:background="#F2F8DF"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:src="@drawable/bomdia"
+            android:layout_marginHorizontal="24dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/simulados"
+            android:layout_marginHorizontal="24dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/bellingham"
+            android:layout_marginHorizontal="24dp" />
+
+        <ImageView
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/person"
+            android:layout_marginHorizontal="24dp" />
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
