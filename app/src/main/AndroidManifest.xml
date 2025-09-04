@@ -32,6 +32,10 @@
         <activity
             android:name=".MainActivity"
             android:exported="false" />
+        <activity android:name=".TransformacoesActivity" />
+        <activity android:name=".LigacoesActivity" />
+        <activity android:name=".EstequiometriaActivity" />
+        <activity android:name=".TermoquimicaActivity" />
     </application>
 
 </manifest>
