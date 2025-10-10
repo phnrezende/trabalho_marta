@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F7FBE9">
+    android:background="@color/fundo">
 
     <!-- Título -->
     <TextView
@@ -28,7 +28,7 @@
         android:orientation="horizontal"
         android:background="@drawable/editsearch"
         android:layout_marginTop="16dp"
-        android:padding="10dp"
+        android:padding="1dp"
         android:gravity="center_vertical"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
@@ -71,7 +71,7 @@
         android:orientation="vertical"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="20dp"
         android:layout_marginBottom="60dp"
         app:layout_constraintTop_toBottomOf="@id/searchBar"
         app:layout_constraintBottom_toTopOf="@id/navBar"
@@ -85,7 +85,8 @@
             android:orientation="horizontal"
             android:padding="8dp"
             android:layout_marginBottom="8dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:background="@drawable/editnotificacoes">
 
             <ImageView
                 android:id="@+id/imgNotification1"
@@ -118,13 +119,69 @@
                     android:text="31/05/2025"
                     android:textColor="#666666"
                     android:textSize="12sp"/>
+
+
+
             </LinearLayout>
+            <!-- Segunda notificação -->
+
 
             <ImageView
                 android:id="@+id/btnClose1"
                 android:layout_width="24dp"
                 android:layout_height="24dp"
+                android:src="@drawable/ic_close_24"
                 android:contentDescription="Fechar notificação" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/editnotificacoes"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <ImageView
+                android:id="@+id/imgNotification2"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="Imagem notificação" />
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvNotificationTitle2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="2"
+                    android:text="Gabradito comentado divulgado"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tvNotificationDate2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10/10/2025"
+                    android:textColor="#666666"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnClose2"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Fechar notificação"
+                android:src="@drawable/ic_close_24" />
         </LinearLayout>
 
         <!-- Outras notificações seguem a mesma estrutura -->
