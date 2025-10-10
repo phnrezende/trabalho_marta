@@ -32,25 +32,25 @@
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:layout_marginHorizontal="24dp"
-            android:src="@drawable/bomdia" />
+            android:src="@drawable/ic_home" />
 
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginHorizontal="24dp"
-            android:src="@drawable/simulados" />
+            android:src="@drawable/ic_simulados" />
 
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginHorizontal="24dp"
-            android:src="@drawable/bellingham" />
+            android:src="@drawable/ic_notificacao" />
 
         <ImageView
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_marginHorizontal="24dp"
-            android:src="@drawable/person" />
+            android:src="@drawable/ic_perfil" />
 
     </LinearLayout>
 

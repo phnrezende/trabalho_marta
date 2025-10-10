@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7FBE9">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Notificações"
+        android:textSize="25sp"
+        android:textColor="#3b3f2b"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="40dp"/>
+
+    <!-- Barra de busca -->
+    <LinearLayout
+        android:id="@+id/searchBar"
+        android:layout_width="324dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="@drawable/editsearch"
+        android:layout_marginTop="16dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Ícone menu -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_menu"
+            app:tint="#ffffff" />
+
+        <!-- EditText para busca -->
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:hint="Buscar Notificações..."
+            android:textColor="#ffffff"
+            android:textColorHint="#e0e0e0"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:singleLine="true" />
+
+        <!-- Ícone lupa -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_search"
+            app:tint="#ffffff" />
+    </LinearLayout>
+
+    <!-- Lista de notificações -->
+    <LinearLayout
+        android:id="@+id/notificationList"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="60dp"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintBottom_toTopOf="@id/navBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Exemplo de item de notificação -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:orientation="horizontal"
+            android:padding="8dp"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/imgNotification1"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:contentDescription="Imagem notificação"
+                android:layout_marginEnd="8dp"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tvNotificationTitle1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Novo simulado já disponível"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <TextView
+                    android:id="@+id/tvNotificationDate1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="31/05/2025"
+                    android:textColor="#666666"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnClose1"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:contentDescription="Fechar notificação" />
+        </LinearLayout>
+
+        <!-- Outras notificações seguem a mesma estrutura -->
+
+    </LinearLayout>
+
+    <!-- Navbar fixa na parte inferior -->
+
+    <Button
+        android:id="@+id/continuar"
+        android:layout_width="360dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edittthosewhoknow"
+        android:gravity="center"
+        android:text="Limpar"
+        android:textColor="#E6E6E6"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@id/navBar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="12dp" />
+
+
+    <include
+        android:id="@+id/navBar"
+        layout="@layout/fragment_nav_bar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

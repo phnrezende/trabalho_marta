@@ -125,39 +125,12 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/logo" />
 
-    <LinearLayout
-        android:id="@+id/bottomNav"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:orientation="horizontal"
-        android:gravity="center"
+    <include
+        android:id="@+id/navbar_include"
+        layout="@layout/fragment_nav_bar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintEnd_toEndOf="parent" />
 
-        <ImageView
-            android:layout_width="38dp"
-            android:layout_height="38dp"
-            android:src="@drawable/bomdia"
-            android:layout_marginHorizontal="24dp" />
 
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/simulados"
-            android:layout_marginHorizontal="24dp" />
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/bellingham"
-            android:layout_marginHorizontal="24dp" />
-
-        <ImageView
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:src="@drawable/person"
-            android:layout_marginHorizontal="24dp" />
-
-    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
